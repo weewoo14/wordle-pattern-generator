@@ -1,0 +1,34 @@
+:root {
+  --maxWindowWidth: 1470;
+}
+
+.HeaderTitle {
+  text-align: center;
+}
+
+.PatternTileRowDiv {
+  display: flex;
+  justify-content: center;
+  max-width: var(--maxWindowWidth);
+}
+
+.SubmitButton, .InputButton, .ResetButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 10px;
+  
+}
+
+.SubmitButtonText, .InputButtonText, .ResetButtonText {
+  width: 100px;
+  padding: 10px;
+
+  border: 1.5px solid black;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
