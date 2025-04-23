@@ -58,8 +58,10 @@ function App() {
         <PatternTile idname = "r6c5"/>
       </div>
 
-      <SubmitButton/>
-      <ResetButton/>
+      <div className = "FunctionalButtons">
+        <SubmitButton/>
+        <ResetButton/>
+      </div>
     </>
   );
 }

@@ -44,6 +44,7 @@ const GlobalProvider = ({ children }) => {
 
   const [resetButtonPress, setResetButtonPress] = useState(false);
   const [wordleWord, setWordleWord] = useState(false);
+  const [possibleWords, setPossibleWords] = useState('');
 
   return (
     <GlobalContext.Provider value = {{
@@ -55,6 +56,9 @@ const GlobalProvider = ({ children }) => {
 
         wordleWord,
         setWordleWord,
+
+        possibleWords,
+        setPossibleWords,
 
         characterPlacement,
         setCharacterPlacement
