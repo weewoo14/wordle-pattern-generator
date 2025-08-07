@@ -6,16 +6,16 @@ import ResetButton from './ResetButton.jsx'
 
 function App() {
   return (
-    <>
+    <div className = "Webpage">
       <Header/>
       <InputWordleWord/>
 
       <div className = "PatternTileRowDiv">
-        <PatternTile idname = "r1c1"/>
-        <PatternTile idname = "r1c2"/>
-        <PatternTile idname = "r1c3"/>
-        <PatternTile idname = "r1c4"/>
-        <PatternTile idname = "r1c5"/>
+        <PatternTile className = "PatternTileSquare" idname = "r1c1"/>
+        <PatternTile className = "PatternTileSquare" idname = "r1c2"/>
+        <PatternTile className = "PatternTileSquare" idname = "r1c3"/>
+        <PatternTile className = "PatternTileSquare" idname = "r1c4"/>
+        <PatternTile className = "PatternTileSquare" idname = "r1c5"/>
       </div>
 
       <div className = "PatternTileRowDiv">
@@ -62,7 +62,7 @@ function App() {
         <SubmitButton/>
         <ResetButton/>
       </div>
-    </>
+    </div>
   );
 }
 

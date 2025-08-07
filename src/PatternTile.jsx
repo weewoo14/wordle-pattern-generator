@@ -46,7 +46,7 @@ function PatternTile(props) {
     
   });
 
-  const colorCycle = ["gray", "#b4a03b", "#518d53"];
+  const colorCycle = ["black", "#b4a03b", "#518d53"];
   
   const colorMapping = {
     "gray" : 0,
@@ -130,7 +130,10 @@ function PatternTile(props) {
         justifyContent: "center",
         alignItems: "center",
 
-        border: "1.5px solid black",
+        borderColor: "#3a393c",
+        borderWidth: "1.5px",
+        borderStyle: "solid",
+
         backgroundColor: buttonColors[props.idname],
 
         fontFamily: "arial, sans-serif",
