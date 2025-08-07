@@ -8,48 +8,48 @@ function PatternTile(props) {
   const { submitButtonPress, setSubmitButtonPress, resetButtonPress, setResetButtonPress, wordleWord, setWordleWord, possibleWords, setPossibleWords, characterPlacement, setCharacterPlacement } = useGlobalContext();
 
   const [buttonColors, setButtonColors] = useState({
-    "r1c1" : "gray",
-    "r1c2" : "gray",
-    "r1c3" : "gray",
-    "r1c4" : "gray",
-    "r1c5" : "gray",
+    "r1c1" : "#3a393c",
+    "r1c2" : "#3a393c",
+    "r1c3" : "#3a393c",
+    "r1c4" : "#3a393c",
+    "r1c5" : "#3a393c",
   
-    "r2c1" : "gray",
-    "r2c2" : "gray",
-    "r2c3" : "gray",
-    "r2c4" : "gray",
-    "r2c5" : "gray",
+    "r2c1" : "#3a393c",
+    "r2c2" : "#3a393c",
+    "r2c3" : "#3a393c",
+    "r2c4" : "#3a393c",
+    "r2c5" : "#3a393c",
   
-    "r3c1" : "gray",
-    "r3c2" : "gray",
-    "r3c3" : "gray",
-    "r3c4" : "gray",
-    "r3c5" : "gray",
+    "r3c1" : "#3a393c",
+    "r3c2" : "#3a393c",
+    "r3c3" : "#3a393c",
+    "r3c4" : "#3a393c",
+    "r3c5" : "#3a393c",
   
-    "r4c1" : "gray",
-    "r4c2" : "gray",
-    "r4c3" : "gray",
-    "r4c4" : "gray",
-    "r4c5" : "gray",
+    "r4c1" : "#3a393c",
+    "r4c2" : "#3a393c",
+    "r4c3" : "#3a393c",
+    "r4c4" : "#3a393c",
+    "r4c5" : "#3a393c",
   
-    "r5c1" : "gray",
-    "r5c2" : "gray",
-    "r5c3" : "gray",
-    "r5c4" : "gray",
-    "r5c5" : "gray",
+    "r5c1" : "#3a393c",
+    "r5c2" : "#3a393c",
+    "r5c3" : "#3a393c",
+    "r5c4" : "#3a393c",
+    "r5c5" : "#3a393c",
   
-    "r6c1" : "gray",
-    "r6c2" : "gray",
-    "r6c3" : "gray",
-    "r6c4" : "gray",
-    "r6c5" : "gray"
+    "r6c1" : "#3a393c",
+    "r6c2" : "#3a393c",
+    "r6c3" : "#3a393c",
+    "r6c4" : "#3a393c",
+    "r6c5" : "#3a393c"
     
   });
 
-  const colorCycle = ["gray", "#b4a03b", "#518d53"];
+  const colorCycle = ["#3a393c", "#b4a03b", "#518d53"];
   
   const colorMapping = {
-    "gray" : 0,
+    "#3a393c" : 0,
     "#b4a03b" : 1,
     "#518d53" : 2
   };
@@ -93,7 +93,7 @@ function PatternTile(props) {
   
         return {
           ...prev,
-          [props.idname]: "gray"
+          [props.idname]: "#3a393c"
         };
       });
 
@@ -133,6 +133,7 @@ function PatternTile(props) {
         borderColor: "#3a393c",
         borderWidth: "1.5px",
         borderStyle: "solid",
+        borderRadius: "2%",
 
         backgroundColor: buttonColors[props.idname],
 
