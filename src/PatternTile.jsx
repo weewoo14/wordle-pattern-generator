@@ -46,7 +46,7 @@ function PatternTile(props) {
     
   });
 
-  const colorCycle = ["black", "#b4a03b", "#518d53"];
+  const colorCycle = ["gray", "#b4a03b", "#518d53"];
   
   const colorMapping = {
     "gray" : 0,
