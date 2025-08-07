@@ -10,7 +10,7 @@ function equalTwoArrays(arr1, arr2) {
   return true;
 }
 
-function createFreqObj(str) {
+function createFreqObj( str ) {
   let counter = {
     "a" : 0,
     "b" : 0,
@@ -39,8 +39,9 @@ function createFreqObj(str) {
     "y" : 0,
     "z" : 0 
   };
+
   for (let letter of str) {
-    counter[letter] += 1;
+    counter[ letter ] += 1;
   };
 
   return counter;
@@ -53,7 +54,7 @@ export function findWords(wordList, wordleWord, wordlePattern) {
 
     let foundPossibleWord = false;
     for (let word of wordList) {
-
+      
       let curWordRow = [-1, -1, -1, -1, -1];
       let freqWord = createFreqObj(wordleWord);
 
@@ -95,6 +96,7 @@ export function findWords(wordList, wordleWord, wordlePattern) {
       return possibleWords;
     }
   }
+  console.log( possibleWords );
   return possibleWords;
 
 }

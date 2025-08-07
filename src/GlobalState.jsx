@@ -43,7 +43,7 @@ const GlobalProvider = ({ children }) => {
   });
 
   const [resetButtonPress, setResetButtonPress] = useState(false);
-  const [wordleWord, setWordleWord] = useState(false);
+  const [wordleWord, setWordleWord] = useState("");
   const [possibleWords, setPossibleWords] = useState('');
 
   return (

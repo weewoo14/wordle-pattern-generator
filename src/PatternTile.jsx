@@ -57,8 +57,10 @@ function PatternTile(props) {
   useEffect(() => {
     if (submitButtonPress == true) {
 
-      if (possibleWords.length == 6) {
+      if (possibleWords.length == 6 && wordleWord.length > 0) {
+
         setCharacterPlacement((prev) => {
+
           let idRowNum = Number(props.idname[1]) - 1;
           let idColNum = Number(props.idname[3]) - 1;
 

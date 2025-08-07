@@ -5,7 +5,7 @@ import { useGlobalContext } from "./GlobalState.jsx";
 
 function SubmitButton() {
   const [wordList, setWordList] = useState('');
-  const { wordleWord, setSubmitButtonPress, possibleWords, setPossibleWords } = useGlobalContext();
+  const { wordleWord, setSubmitButtonPress, possibleWords, setPossibleWords, } = useGlobalContext();
 
   useEffect(() => {
   
@@ -25,10 +25,13 @@ function SubmitButton() {
     }, []);
 
     function submitButtonPressed() {
+      var possibleWordsList = findWords(wordList, wordleWord, wordlePattern);
+      setPossibleWords( possibleWordsList );
       setSubmitButtonPress(true);
-      setPossibleWords(findWords(wordList, wordleWord, wordlePattern));
 
-      if (possibleWords.length != 6) {
+      if (wordleWord.length === 0) {
+        alert("Please enter a word.");
+      } else if (possibleWordsList.length != 6) {
         alert("No possibilities. Please reset your word and try a new pattern.");
       };
     };
