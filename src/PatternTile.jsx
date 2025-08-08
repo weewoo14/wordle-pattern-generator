@@ -1,50 +1,19 @@
 import { useEffect, useState } from "react";
 
-import { findWords } from "./findpattern.js";
 import { wordlePattern } from "./global";
 import { useGlobalContext } from "./GlobalState.jsx";
 
 function PatternTile(props) {
   const { submitButtonPress, setSubmitButtonPress, resetButtonPress, setResetButtonPress, wordleWord, setWordleWord, possibleWords, setPossibleWords, characterPlacement, setCharacterPlacement } = useGlobalContext();
 
-  const [buttonColors, setButtonColors] = useState({
-    "r1c1" : "#3a393c",
-    "r1c2" : "#3a393c",
-    "r1c3" : "#3a393c",
-    "r1c4" : "#3a393c",
-    "r1c5" : "#3a393c",
-  
-    "r2c1" : "#3a393c",
-    "r2c2" : "#3a393c",
-    "r2c3" : "#3a393c",
-    "r2c4" : "#3a393c",
-    "r2c5" : "#3a393c",
-  
-    "r3c1" : "#3a393c",
-    "r3c2" : "#3a393c",
-    "r3c3" : "#3a393c",
-    "r3c4" : "#3a393c",
-    "r3c5" : "#3a393c",
-  
-    "r4c1" : "#3a393c",
-    "r4c2" : "#3a393c",
-    "r4c3" : "#3a393c",
-    "r4c4" : "#3a393c",
-    "r4c5" : "#3a393c",
-  
-    "r5c1" : "#3a393c",
-    "r5c2" : "#3a393c",
-    "r5c3" : "#3a393c",
-    "r5c4" : "#3a393c",
-    "r5c5" : "#3a393c",
-  
-    "r6c1" : "#3a393c",
-    "r6c2" : "#3a393c",
-    "r6c3" : "#3a393c",
-    "r6c4" : "#3a393c",
-    "r6c5" : "#3a393c"
-    
-  });
+  var patternTileIDMap = new Object();
+  for (let row = 1; row <= 6; row++) {
+    for (let col = 1; col <= 5; col++) {
+      var patternTileID = "r" + String(row) + "c" + String(col);
+      patternTileIDMap[ patternTileID ] = "#3a393c";
+    };
+  };
+  const [buttonColors, setButtonColors] = useState(patternTileIDMap);
 
   const colorCycle = ["#3a393c", "#b4a03b", "#518d53"];
   
