@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import { findWords } from "./findpattern.js"
 import { wordlePattern } from "./global.js";
 import { useGlobalContext } from "./GlobalState.jsx";
+import ModalWindow from "./Modal.jsx";
 
 function SubmitButton() {
   const [wordList, setWordList] = useState('');
+  const [noWordleWord, setNoWordleWord] = useState(false);
+  const [noFoundPossibleWords, setNoFoundPossibleWords] = useState(false);
+
   const { wordleWord, setSubmitButtonPress, possibleWords, setPossibleWords } = useGlobalContext();
 
   useEffect(() => {
@@ -30,17 +34,23 @@ function SubmitButton() {
     setSubmitButtonPress(true);
 
     if (wordleWord.length === 0) {
-      alert("Please enter a word.");
+      setNoWordleWordEntered(true);
     } else if (possibleWordsList.length != 6) {
-      alert("No possibilities. Please reset your word and try a new pattern.");
+      setNoFoundPossibleWords(true);
     };
   };
 
   return (
-    <div className = "SubmitButton">
-      <button className="SubmitButtonBackground" onClick = {() => submitButtonPressed()}>
-        <h2 className = "SubmitButtonText"> Submit </h2>
-      </button>
+    <div>
+      <div className = "SubmitButton">
+        <button className="SubmitButtonBackground" onClick = {() => submitButtonPressed()}>
+          <h2 className = "SubmitButtonText"> Submit </h2>
+        </button>
+      </div>
+
+      <ModalWindow modalWindowOpen={noFoundPossibleWords} modalWindowClose={() => {setNoFoundPossibleWords(false)}}>
+        <h1> No Possibilities </h1>
+      </ModalWindow>
     </div>
   );
 
