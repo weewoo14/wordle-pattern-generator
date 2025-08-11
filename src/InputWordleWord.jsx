@@ -36,7 +36,7 @@ function InputWordleWord() {
   return (
     <div className = "InputButton">
       <button className = "InputButtonBackground" onClick={() => inputWordPrompt()}>
-        <h2 className = "InputButtonText"> Input: {wordleWord} </h2>
+        <h2 className = "InputButtonText"> Input Word: {wordleWord} </h2>
       </button>
     </div>
   );
