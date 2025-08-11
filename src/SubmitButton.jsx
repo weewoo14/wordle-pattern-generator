@@ -37,8 +37,10 @@ function SubmitButton() {
     };
 
   return (
-    <div className = "SubmitButton" onClick = {() => submitButtonPressed()}>
-      <h2 className = "SubmitButtonText"> Submit </h2>
+    <div className = "SubmitButton">
+      <button className="SubmitButtonBackground" onClick = {() => submitButtonPressed()}>
+        <h2 className = "SubmitButtonText"> Submit </h2>
+      </button>
     </div>
   );
 

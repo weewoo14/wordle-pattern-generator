@@ -28,18 +28,18 @@ body {
   justify-content: center;
 }
 
-.SubmitButton, .InputButton, .ResetButton {
+.SubmitButton, .InputButton, .ResetButton, .InstructionsButton, .closeInstructionsButton {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   
 }
 
-.SubmitButtonText, .InputButtonText, .ResetButtonText {
-  width: 100px;
+.SubmitButtonText, .InputButtonText, .ResetButtonText, .InstructionsButtonText, .closeInstructionsButtonText {
+  width: 150px;
   padding: 10px;
 
   border: 1.5px solid white;
@@ -55,8 +55,8 @@ body {
 
 }
 
-.SubmitButtonText:hover, .InputButtonText:hover, .ResetButtonText:hover {
-  width: 100px;
+.SubmitButtonText:hover, .InputButtonText:hover, .ResetButtonText:hover, .InstructionsButtonText:hover, .closeInstructionsButtonText:hover {
+  width: 150px;
   padding: 10px;
 
   border: 1.5px solid rgb(81, 141, 83);
@@ -72,11 +72,43 @@ body {
 
 }
 
-.InputButtonBackground {
+.InputButtonBackground, .SubmitButtonBackground, .ResetButtonBackground, .InstructionsButtonBackground, .closeInstructionsButtonBackground {
   background: transparent;
   border: none;
 }
-.InputButtonBAckground:hover {
+.InputButtonBackground:hover, .SubmitButtonBackground:hover, .ResetButtonBackground:hover, .InstructionsButtonBackground:hover, .closeInstructionsButtonBackground:hover {
   background: transparent;
   border: none;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left: 0 */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  position: relative;
+  background: rgb(18, 18, 18);
+
+  padding: 1.5rem;
+
+  border: 1.5px white solid;
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+  color: white;
+
+  max-width: 500px;
+  width: 100%;
+  z-index: 10;
 }
