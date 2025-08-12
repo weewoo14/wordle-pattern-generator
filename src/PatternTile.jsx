@@ -24,6 +24,7 @@ function PatternTile(props) {
   };
 
   useEffect(() => {
+    console.log(props.idname)
     if (submitButtonPress == true) {
 
       if (possibleWords.length == 6 && wordleWord.length > 0) {
