@@ -7,7 +7,9 @@ import ResetButton from './ResetButton.jsx'
 function App() {
   return (
     <div className = "Webpage">
-      <Header/>
+      <div className = "HeaderDivBlock">
+        <Header/>
+      </div>
       <InputWordleWord/>
 
       <div className = "PatternTileRowDiv">

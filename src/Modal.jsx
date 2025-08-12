@@ -1,5 +1,4 @@
 function ModalWindow({ modalWindowOpen, modalWindowClose, children }) {
-  console.log (modalWindowOpen);
   if (modalWindowOpen === false) {
     return null;
   };

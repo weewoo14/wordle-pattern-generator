@@ -34,7 +34,7 @@ function SubmitButton() {
     setSubmitButtonPress(true);
 
     if (wordleWord.length === 0) {
-      setNoWordleWordEntered(true);
+      setNoWordleWord(true);
     } else if (possibleWordsList.length != 6) {
       setNoFoundPossibleWords(true);
     };
@@ -47,6 +47,10 @@ function SubmitButton() {
           <h2 className = "SubmitButtonText"> Submit </h2>
         </button>
       </div>
+
+      <ModalWindow modalWindowOpen={noWordleWord} modalWindowClose={() => {setNoWordleWord(false)}}>
+        <h1> No Wordle Word Entered. Please Enter One. </h1>
+      </ModalWindow>
 
       <ModalWindow modalWindowOpen={noFoundPossibleWords} modalWindowClose={() => {setNoFoundPossibleWords(false)}}>
         <h1> No Possibilities </h1>

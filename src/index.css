@@ -6,15 +6,46 @@ body {
   background-color: rgb(18, 18, 18);
 }
 
+.HeaderDivBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeaderSubtitle {
+  color:#3a393c;
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 5px;
+
+}
 
 .HeaderTitle {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 4.5rem;
+  position: relative;
+
+  margin-bottom: 5px;
+}
+
+.HeaderTitle::before {
+  content: attr(data-text);
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
   background-image: linear-gradient(to right, rgb(180, 160, 59), rgb(81, 141, 83));
   color: transparent;
   background-clip: text;
-
-  font-family: Arial, sans-serif;
-  font-size: 4rem;
+  transform: translate(5px, 5px);
 }
 
 .PatternTileRowDiv {

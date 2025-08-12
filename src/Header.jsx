@@ -5,7 +5,8 @@ function Header() {
   const [instructionsButtonPress, setInstructionsButtonPress] = useState(false);
   return(
     <header>
-      <h1 className = "HeaderTitle"> Wordle Pattern Generator </h1>
+      <h1 data-text = "Pattordle!" className = "HeaderTitle"> Pattordle! </h1>
+      <p className = "HeaderSubtitle"> Pattern design meets Wordle</p>
 
     <div className = "InstructionsButton">
       <button className="InstructionsButtonBackground" onClick = {() => setInstructionsButtonPress(true)}>
